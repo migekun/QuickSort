@@ -23,7 +23,7 @@ public class QuickSort {
 	public static void main(String[] args) {
 		List<Integer> numbers = getNumbers();
 		quickSort(numbers);
-		System.out.println("-----------" + numbers.toString());
+		System.out.println("Ordered list: " + numbers.toString());
 	}
 
 	public static void quickSort(List<Integer> numbers)
@@ -45,7 +45,6 @@ public class QuickSort {
 
 		for (int j = leftIndex + 1 ; j < rightIndex; j++) {
 			if (numbers.get(j) < pivot) {
-//				System.out.println("compare " + numbers.get(j));
 				swap(numbers, j, index);
 				index ++;
 			}
@@ -55,21 +54,10 @@ public class QuickSort {
 	}
 
 	private static void swap(List<Integer> numbers, int index1, int index2) {
-//		System.out.println("sswap " + numbers.toString() + " index 1: " + index1 + " index 2: " + index2 );
 		int index1Value = numbers.get(index1);
 		int index2Value = numbers.get(index2);
 		numbers.set(index1, index2Value);
-		numbers.set(index2, index1Value);
-		
-	}
-
-	/**
-	 * 
-	 * @param numbers
-	 * @return
-	 */
-	private static Integer getPivotIndex(List<Integer> numbers) {
-		return numbers.get(0);
+		numbers.set(index2, index1Value);	
 	}
 	
 	/**
@@ -80,7 +68,7 @@ public class QuickSort {
 		BufferedReader br = null;
 		List<Integer> numbers = new LinkedList<Integer>();
 		try {
-			br = new BufferedReader(new FileReader("QuickSort.txt"));
+			br = new BufferedReader(new FileReader("/Users/miguelangelnavasgarcia/Documents/workspace/QuickSort/src/kun/QuickSort.txt"));
 
 			String line = br.readLine();
 
