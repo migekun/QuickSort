@@ -49,17 +49,19 @@ public class QuickSortTest {
 	
 	@Test
 	public void test_more_then_3Elements() {
-		List<Integer> numbers = new LinkedList<Integer>(Arrays.asList(4, 5, 6, 1, 2, 3));
+		List<Integer> numbers = new LinkedList<Integer>(Arrays.asList(4, 5, 6, 1, 2, 3, 7));
 		
 		QuickSort.quickSort(numbers);
 		
 		int value = 1;
-		assertThat(numbers.get(0), is(value ++));
-		assertThat(numbers.get(1), is(value ++));
-		assertThat(numbers.get(2), is(value ++));
-		assertThat(numbers.get(3), is(value ++));
-		assertThat(numbers.get(4), is(value ++));
-		assertThat(numbers.get(5), is(value ++));
+		int index = 0;
+		assertThat(numbers.get(index ++), is(value ++));
+		assertThat(numbers.get(index ++), is(value ++));
+		assertThat(numbers.get(index ++), is(value ++));
+		assertThat(numbers.get(index ++), is(value ++));
+		assertThat(numbers.get(index ++), is(value ++));
+		assertThat(numbers.get(index ++), is(value ++));
+		assertThat(numbers.get(index ++), is(value ++));
 	}
 	
 }
