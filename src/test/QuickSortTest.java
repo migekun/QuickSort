@@ -29,7 +29,26 @@ public class QuickSortTest {
 	}
 
 	@Test
-	public void test() {
+	public void test_oneElement() {
+		List<Integer> numbers = new LinkedList<Integer>(Arrays.asList(4));
+		
+		QuickSort.quickSort(numbers);
+		
+		assertThat(numbers.get(0), is(4));
+	}
+	
+	@Test
+	public void test_twoElement() {
+		List<Integer> numbers = new LinkedList<Integer>(Arrays.asList(400, 5));
+		
+		Integer comparations = QuickSort.quickSort(numbers);
+		
+		assertThat(numbers.get(0), is(5));
+		assertThat(comparations, is(1));
+	}
+	
+	@Test
+	public void test_more_then_3Elements() {
 		List<Integer> numbers = new LinkedList<Integer>(Arrays.asList(4, 5, 6, 1, 2, 3));
 		
 		QuickSort.quickSort(numbers);
