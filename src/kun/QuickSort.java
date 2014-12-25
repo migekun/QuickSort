@@ -113,7 +113,7 @@ public class QuickSort {
 		numbers.set(index2, index1Value);	
 	}
 	
-	enum Method {
+	private enum Method {
 		FIRST, LAST, MIDDLE
 	}
 }
